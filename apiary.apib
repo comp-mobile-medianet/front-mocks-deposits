@@ -1,0 +1,210 @@
+FORMAT: 1A
+HOST: http://www.google.com
+
+# Deposits
+JSON contracts between back and front end for deposits functionality
+
+# Group Deposits list
+
+List of deposits
+
+Form parameters:
+<ul>
+    <li>depositType</li>
+    <li>depositId</li>
+    <li>customerSort</li>
+    <li>businessSort</li>
+</ul>
+
+_eventId:
+<ul>
+    <li>To deposit detail: viewDeposit</li>
+</ul>
+
+## List of deposits [/pages/deposits/list.json]
+### Valid [GET]
++ Response 200 (application/json)
+
+        {
+            "header": {
+                "showMenu": true,
+                "hideBackButton": true
+            },
+            "pageContent": {
+                "empty": false,
+                "customer": {
+                    "sortInfo": {
+                        "criteria": 0,
+                        "ascendant": false
+                    },
+                    "deposits": [
+                        {
+                            "status": "REJECTED",
+                            "description": "Deposit Received",
+                            "amount": 0
+                        },
+                        {
+                            "status": "ACCEPTED",
+                            "description": "Deposit Received",
+                            "amount": 0
+                        }
+                    ]
+                },
+                "business": {
+                    "sortInfo": {
+                        "criteria": 1,
+                        "ascendant": true
+                    },
+                    "deposits": [
+                        {
+                            "status": "REJECTED",
+                            "description": "Deposit Received",
+                            "amount": 0
+                        },
+                        {
+                            "status": "ACCEPTED",
+                            "description": "Deposit Received",
+                            "amount": 0
+                        },
+                        {
+                            "status": "ACCEPTED",
+                            "description": "Deposit Received",
+                            "amount": 0
+                        }
+                    ]
+                }
+            }
+        }
+
+## Empty deposits [/pages/deposits/list.json?mockId=empty]
+### Valid [GET]
++ Response 200 (application/json)
+    
+        {
+            "header": {
+                "showMenu": true,
+                "hideBackButton": true
+            },
+            "pageContent": {
+                "empty": true
+            }
+        }
+
+# Group Deposit a check
+
+Deposit a check
+
+Form parameters:
+<ul>
+    <li>frontImage</li>
+    <li>backImage</li>
+    <li>accountKey</li>
+    <li>amount</li>
+</ul>
+
+_eventId:
+<ul>
+    <li>To deposit a check: deposit</li>
+    <li>To list of deposits: back</li>
+</ul>
+
+## Deposit a check with 3 accounts [/pages/deposits/depositACheck.json]
+### Valid [GET]
++ Response 200 (application/json)
+
+        {
+            "user": {
+                "agent": {
+                    "os": "Android"
+                }
+            },
+            "pageContent": {
+                "accounts": [
+                    {
+                        "key":"123456789",
+                        "accountNickName":"Johnny",
+                        "accountLast4":"5566"
+                    },
+                    {
+                        "key":"234567891",
+                        "accountNickName":"Cuenta BBVA",
+                        "accountLast4": "1561"
+                    },
+                    {
+                        "key":"681946782",
+                        "accountNickName":"Cuenta BBVA",
+                        "accountLast4": "1234"
+                    }
+                ]
+            }
+        }
+
+## Deposit a check with 4 accounts [/pages/deposits/depositACheck.json?mockId=1]
+### Valid [GET]
++ Response 200 (application/json)
+
+        {
+            "user": {
+                "agent": {
+                    "os": "Android"
+                }
+            },
+            "pageContent": {
+                "accounts": [
+                    {
+                        "key":"123456789",
+                        "accountNickName":"Johnny",
+                        "accountLast4":"5566"
+                    },
+                    {
+                        "key":"234567891",
+                        "accountNickName":"Cuenta BBVA",
+                        "accountLast4": "1561"
+                    },
+                    {
+                        "key":"681946782",
+                        "accountNickName":"Cuenta BBVA",
+                        "accountLast4": "1234"
+                    },
+                    {
+                        "key":"236724252",
+                        "accountNickName":"My account",
+                        "accountLast4": "9862"
+                    }
+                ]
+            }
+        }
+
+
+# Group Deposit limits
+
+Limits of the deposits
+
+Form parameters: -
+
+_eventId:
+<ul>
+    <li>To deposit a check: startDeposit</li>
+    <li>To list of deposits: back</li>
+</ul>
+
+## Deposit limits [/pages/deposits/limits.json]
+### Valid [GET]
++ Response 200 (application/json)
+
+        {
+            "pageContent": {
+                "limits": {
+                    "consumerLimitsInformation": {
+                        "perDepositLimit": 0.0,
+                        "monthlyLimit": 0.0,
+                        "remainingMonthlyLimit": 0.0
+                    },
+                    "smallBusinessLimitsInformation": {
+                        "perDepositLimit": 0.0,
+                        "monthlyLimit": 0.0,
+                        "remainingMonthlyLimit": 0.0
+                    }
+                }
+            }
+        }
