@@ -392,3 +392,54 @@ _eventId:
                 }
             }
         }
+
+## Deposit detail [/pages/deposits/detail.json]
+### Valid [GET]
++ Response 200 (application/json)
+
+        {
+            "header": {
+                "showMenu": true,
+                "title": ""
+            },
+            "pageContent": {
+                "empty": false,
+                "activeDepositIndex": "1",
+                "deposits": [
+                    {
+                        "status": "REJECTED",
+                        "date": 12351141411,
+                        "accountNickName":"Johnny",
+                        "accountLast4":"5566",
+                        "description": "Check #3045",
+                        "amount": 400,
+                        "checkAccountNo": "5231981651",
+                        "checkNo": "000000001",
+                        "referenceNo": "07008844794E"
+                    },
+                    {
+                        "status": "ACEPTED",
+                        "date": 12351141411,
+                        "accountNickName":"Johnny",
+                        "accountLast4":"5566",
+                        "description": "Check #3045",
+                        "amount": 1400,
+                        "checkAccountNo": "5231981651",
+                        "checkNo": "000000002",
+                        "referenceNo": "07008844794E"
+                    },
+                    {
+                        "status": "REJECTED",
+                        "date": 12351141411,
+                        "accountNickName":"Johnny",
+                        "accountLast4":"5566",
+                        "description": "Check #3045",
+                        "amount": 200,
+                        "checkAccountNo": "5231981651",
+                        "checkNo": "000000003",
+                        "referenceNo": "07008844794E"
+                    }
+                ]
+            },
+            "flowExecutionUrl": "/api/accounts/checkImages.json?execution=e1s1"
+        }
