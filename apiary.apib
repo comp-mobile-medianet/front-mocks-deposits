@@ -159,32 +159,30 @@ _eventId:
         {
             "header": {
                 "showMenu": true,
-                "hideBackButton": true
+                "hideBackButton": true,
+                "title": "deposit.sublist.business.header"
             },
             "pageContent": {
                 "empty": false,
-                "type": "BUSINESS",
-                "title": "RECENT BUSINESS DEPOSITS",
-                "deposits": {
-                    "sortInfo": {
-                        "criteria": 0,
-                        "ascendant": false
+                "hasMoreData": true,
+                "sortInfo": {
+                    "criteria": 0,
+                    "ascendant": false
+                },
+                "deposits": [
+                    {
+                        "status": "REJECTED",
+                        "date": 12351141411,
+                        "description": "Deposit Received",
+                        "amount": 0
                     },
-                    "deposits": [
-                        {
-                            "status": "REJECTED",
-                            "date": 12351141411,
-                            "description": "Deposit Received",
-                            "amount": 0
-                        },
-                        {
-                            "status": "ACCEPTED",
-                            "date": 12451145411,
-                            "description": "Deposit Received",
-                            "amount": 0
-                        }
-                    ]
-                }
+                    {
+                        "status": "ACCEPTED",
+                        "date": 12451145411,
+                        "description": "Deposit Received",
+                        "amount": 0
+                    }
+                ]
             }
         }
 
