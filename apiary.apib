@@ -119,38 +119,36 @@ _eventId:
         {
             "header": {
                 "showMenu": true,
-                "hideBackButton": true
+                "hideBackButton": true,
+                "title": "deposit.sublist.personal.header"
             },
             "pageContent": {
                 "empty": false,
-                "type": "CUSTOMER",
-                "title": "RECENT PERSONAL DEPOSITS",
-                "deposits": {
-                    "sortInfo": {
-                        "criteria": 1,
-                        "ascendant": true
+                "hasMoreData": true,
+                "sortInfo": {
+                    "criteria": 1,
+                    "ascendant": true
+                },
+                "deposits": [
+                    {
+                        "status": "REJECTED",
+                        "date": 12351111411,
+                        "description": "Deposit Received",
+                        "amount": 0
                     },
-                    "deposits": [
-                        {
-                            "status": "REJECTED",
-                            "date": 12351111411,
-                            "description": "Deposit Received",
-                            "amount": 0
-                        },
-                        {
-                            "status": "ACCEPTED",
-                            "date": 12351141411,
-                            "description": "Deposit Received",
-                            "amount": 0
-                        },
-                        {
-                            "status": "ACCEPTED",
-                            "date": 12351141411,
-                            "description": "Deposit Received",
-                            "amount": 0
-                        }
-                    ]
-                }
+                    {
+                        "status": "ACCEPTED",
+                        "date": 12351141411,
+                        "description": "Deposit Received",
+                        "amount": 0
+                    },
+                    {
+                        "status": "ACCEPTED",
+                        "date": 12351141411,
+                        "description": "Deposit Received",
+                        "amount": 0
+                    }
+                ]
             }
         }
 
