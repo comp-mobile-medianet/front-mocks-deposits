@@ -95,6 +95,101 @@ _eventId:
             }
         }
 
+# Group Deposits Sublist
+
+List of deposits
+
+Form parameters:
+<ul>
+    <li>depositType</li>
+    <li>depositId</li>
+    <li>customerSort</li>
+    <li>businessSort</li>
+</ul>
+
+_eventId:
+<ul>
+    <li>To deposit detail: viewDeposit</li>
+</ul>
+
+## Personal deposits [/pages/deposits/sublist.json]
+### Valid [GET]
++ Response 200 (application/json)
+
+        {
+            "header": {
+                "showMenu": true,
+                "hideBackButton": true
+            },
+            "pageContent": {
+                "empty": false,
+                "type": "CUSTOMER",
+                "title": "RECENT PERSONAL DEPOSITS",
+                "deposits": {
+                    "sortInfo": {
+                        "criteria": 1,
+                        "ascendant": true
+                    },
+                    "deposits": [
+                        {
+                            "status": "REJECTED",
+                            "date": 12351111411,
+                            "description": "Deposit Received",
+                            "amount": 0
+                        },
+                        {
+                            "status": "ACCEPTED",
+                            "date": 12351141411,
+                            "description": "Deposit Received",
+                            "amount": 0
+                        },
+                        {
+                            "status": "ACCEPTED",
+                            "date": 12351141411,
+                            "description": "Deposit Received",
+                            "amount": 0
+                        }
+                    ]
+                }
+            }
+        }
+
+## Business accounts [/pages/deposits/sublist.json?mockId=business]
+### Valid [GET]
++ Response 200 (application/json)
+
+        {
+            "header": {
+                "showMenu": true,
+                "hideBackButton": true
+            },
+            "pageContent": {
+                "empty": false,
+                "type": "BUSINESS",
+                "title": "RECENT BUSINESS DEPOSITS",
+                "deposits": {
+                    "sortInfo": {
+                        "criteria": 0,
+                        "ascendant": false
+                    },
+                    "deposits": [
+                        {
+                            "status": "REJECTED",
+                            "date": 12351141411,
+                            "description": "Deposit Received",
+                            "amount": 0
+                        },
+                        {
+                            "status": "ACCEPTED",
+                            "date": 12451145411,
+                            "description": "Deposit Received",
+                            "amount": 0
+                        }
+                    ]
+                }
+            }
+        }
+
 # Group Deposit a check
 
 Deposit a check
