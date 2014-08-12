@@ -443,6 +443,54 @@ _eventId:
             "flowExecutionUrl": "/deposits/detailInfo.html?execution=e1s1"
         }
 
+## Deposit detail empty [/pages/deposits/detail.json?mockId=empty]
+### Valid [GET]
++ Response 200 (application/json)
+
+        {
+            "header": {
+                "showMenu": true,
+                "title": "deposit.sublist.personal.header"
+            },
+            "pageContent": {
+                "empty": false,
+                "activeTransactionId": "C_003",
+                "deposits": [
+                    {
+                        "status": "REJECTED",
+                        "date": 12351141411,
+                        "description": "Check #3045",
+                        "amount": 400,
+                        "transactionId": "C_002"
+                    },
+                    {
+                        "status": "ACEPTED",
+                        "date": 12351141411,
+                        "description": "Check #3046",
+                        "amount": 1400,
+                        "transactionId": "C_003",
+                        "detail": {
+                            "accountNickName":"",
+                            "accountLast4":"",
+                            "checkAccountNo": "",
+                            "checkNo": "",
+                            "referenceNo": "",
+                            "frontImage":"",
+                            "backImage":""
+                        }
+                    },
+                    {
+                        "status": "REJECTED",
+                        "date": 12351141411,
+                        "description": "Check #3047",
+                        "amount": 200,
+                        "transactionId": "C_004"
+                    }
+                ]
+            },
+            "flowExecutionUrl": "/deposits/detailInfo.html?execution=e1s1"
+        }
+
 ## Get deposit detail info [/pages/deposits/detailInfo.json]
 ### Valid [GET]
 + Response 200 (application/json)
