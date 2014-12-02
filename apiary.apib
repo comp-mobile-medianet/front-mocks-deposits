@@ -26,11 +26,7 @@ _eventId:
 + Response 200 (application/json)
 
         {
-            "header": {
-                "showMenu": true,
-                "hideBackButton": true
-            }
-            "pageContent": {
+           "pageContent": {
                 "empty": false,
                 "customer": {
                     "deposits": [
@@ -79,8 +75,10 @@ _eventId:
     
         {
             "header": {
-                "showMenu": true,
-                "hideBackButton": true
+                "showMenu": true
+            },
+            "iwantto": {
+                "size": 1
             },
             "pageContent": {
                 "empty": true
@@ -369,10 +367,7 @@ _eventId:
         {
             "header": {
                 "showMenu": true,
-                "title": "deposit.sublist.personal.header"
-            },
-            "iwantto": {
-                "size": 1
+                "hideBackButton": true
             },
             "pageContent": {
                 "limits": {
@@ -407,6 +402,10 @@ _eventId:
 + Response 200 (application/json)
 
         {
+            "header": {
+                "showMenu": true,
+                "title": "deposit.sublist.personal.header"
+            },
             "pageContent": {
                 "empty": false,
                 "activeTransactionId": "C_003",
